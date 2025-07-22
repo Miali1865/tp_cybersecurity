@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enregistrement Clé Publique</title>
+</head>
+<body>
+    <h2>Enregistrement de la clé publique</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label>Nom d'utilisateur:</label>
+        <input type="text" name="username" required><br><br>
+        <label>Fichier de clé publique (.pem):</label>
+        <input type="file" name="public_key_file" accept=".pem" required><br><br>
+        <button type="submit">Enregistrer</button>
+    </form>
+
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+</body>
+</html>

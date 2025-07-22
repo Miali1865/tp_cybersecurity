@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signature de fichier</title>
+</head>
+<body>
+    <h2>Signature de fichier .txt</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label>Nom d'utilisateur :</label>
+        <input type="text" name="username" required><br><br>
+        <label>Fichier texte (.txt) :</label>
+        <input type="file" name="txt_file" accept=".txt" required><br><br>
+        <button type="submit">Signer le fichier</button>
+    </form>
+
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+</body>
+</html>
