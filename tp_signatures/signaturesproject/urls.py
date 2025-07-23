@@ -25,4 +25,3 @@ urlpatterns = [
     path('sign/', views.sign_file, name='sign_file'),
     path('verify/', views.verify_signature, name='verify_signature'),
 ]
-

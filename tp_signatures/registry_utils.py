@@ -19,3 +19,4 @@ def register_user_in_registry(username, public_key_pem):
     registry[username] = public_key_pem
     save_registry(registry)
     print(f"{username} enregistré avec succès.")
+
